@@ -26,4 +26,12 @@ export class AppComponent {
     this.cardDeck = new CardDeck();
     this.currentCards = this.cardDeck.getCards(2);
   }
+
+  showResult() {
+      if (this.getScoreCards() === 21) {
+        return 'You win!'
+      } else if(this.getScoreCards() > 21) {
+        return 'You lose!';
+      }
+  }
 }
