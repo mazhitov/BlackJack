@@ -12,22 +12,18 @@ export class CardComponent {
   getSymbol() {
     switch (this.suit) {
       case 'diams':
-        return '♦'
-        break;
+        return '♦';
       case 'hearts':
         return '♥';
-        break;
       case 'clubs':
         return '♣';
-        break;
       case 'spades':
         return '♠';
-        break;
       default:
         console.log('there is no symbol');
     }
   }
   getClassName() {
-    return `card rank-${this.rank} ${this.suit}`;
+    return `card rank-${this.rank.toLowerCase()} ${this.suit}`;
   }
 }
