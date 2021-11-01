@@ -1,4 +1,7 @@
 <div class="playingCards faceImages">
   <app-card *ngFor="let card of currentCards" [rank]="card.rank" [suit]="card.suit"></app-card>
 </div>
-
+<hr>
+<p><b>Score:</b> {{ getScoreCards() }} </p>
+<button (click)="onGiveAnotherCard()" [disabled]="getScoreCards() >=21" style="margin-right: 10px">Give another card</button>
+<button (click)="onReset()">Reset</button>

@@ -5,8 +5,7 @@ export class Card {
   constructor(
     public rank: string,
     public suit: string
-  ) {
-  }
+  ) {}
 
   getScore() {
     if (this.rank === 'J' || this.rank === 'Q' || this.rank === 'K') {
@@ -16,10 +15,6 @@ export class Card {
       return 11;
     }
     return parseInt(this.rank);
-    // const parseRank = parseInt(this.rank);
-    // if (parseRank >= 2 && parseRank <= 10) {
-    //
-    // }
   }
 }
 
